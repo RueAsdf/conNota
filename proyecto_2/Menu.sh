@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PS3='Please enter your choice: '
+PS3='Por favor ingrese una opcion: '
 
 options=("1-Apagar" "2-Reiniciar" "3-Ver informacion del SO" "4-Ver informacion del kernel" "5-Ver autor" "6-Ejecutar proyecto1" "7-Salir" )
 
@@ -33,7 +33,9 @@ do
             ;;
 
         "6-Ejecutar proyecto1")
-            python3 /home/rue/Escritorio/proyectos/proyecto_1/calculadora.py
+            cd ..
+	    cd proyecto_1
+	    python3 Calculadora.py
             ;;
 
         "7-Salir")
@@ -44,6 +46,6 @@ do
             break
             ;;
 
-        *) echo "invalid option $REPLY";;
+        *) echo "opcion incorrecta $REPLY";;
     esac
 done
